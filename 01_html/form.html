@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form 구성 태그 🐛</title>
+</head>
+<body>
+    <form>
+        <label for="id">
+            id: <input type="text"/>
+            <p>라벨태그</p>
+        </label>        
+        <br/>
+        <label for="pw">
+            password : <input type="password" id="pw" />
+        </label>
+        <input type="button" value="로그인">
+        <input type="submit" value="로그인">
+        <button style="border-radius: 2%; border-color: brown;">로그인 </button>
+        <br/>
+        email: <input type="email" />
+        <input type="color" name="dd" id="">
+        <input type="file" name="" id="">
+        <input type="number" name="" id="">
+        <input type="date" name="" id="">
+        <input type="range" name="" id="">
+        <input type="datetime" name="" id="">
+        <br/>
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <br/>
+        <hr/>
+        <h5>다음중 input의 타입이 아닌것은?(모두 고르시오)</h5>
+        <label>
+            <input type="checkbox"> alt
+        </label>
+        <label>
+            <input type="checkbox"> text
+        </label>
+        <label>
+            <input type="checkbox"> img
+        </label>
+        <label>
+            <input type="checkbox"> click
+        </label>
+        <label>
+            <input type="checkbox"> date
+        </label>
+        <!-- 라벨로 묶어야 글자랑 체크박스가 한 세트로 묶여서 글자를 클릭해도 체크가 됨 -->
+        <h5>다음 중 img 태그의 속성인 것은?</h5>
+        <input type="radio" name="img" id="alt"><label for="alt">alt</label>
+        <input type="radio" name="img" id="bread"><label for="bread">bread</label>
+        <input type="radio" name="img" id="href"><label for="href">href</label>
+        <input type="radio" name="img" id="mouse"><label for="mouse">mouse</label>
+        <input type="radio" name="img" id="dragon" disabled><label for="dragon">dragon</label>
+        <!-- 태그 내에 disabled를 삽입하면 선택불가하게 만들 수 있음 -->
+        <hr/>
+        <select name="" id="">
+            <optgroup label="빨간 꽃">
+            <option value="장미" disabled>장미</option>
+            <option value="튤립">튤립</option>
+            <option value="해바라기">해바라기</option>
+            </optgroup>
+            <optgroup label="하얀 꽃">
+                <option value="벚꽃">벚꽃</option>
+                <option value="백합">백합</option>
+            </optgroup>
+        </select>
+    </form>
+</body>
+</html>
