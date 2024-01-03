@@ -1,0 +1,79 @@
+.d-block{
+    display: block;
+    background-color: aquamarine;
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    padding: 15px;
+    margin: 20px;
+}
+
+.d-inline{
+    display: inline;
+    background-color: pink;
+    width: 1000px;
+    height: 200px;
+    /* padding: 15px;
+    margin: 15px; */
+}
+
+.d-inline-block{
+    display: inline-block;
+    background-color: yellowgreen;
+    width: 100px;
+    height: 100px;
+    border: 1px solid blue;
+    margin: 20px;
+    padding: 15px;
+}
+
+.parent{
+    width: 500px;
+    height: 200px;
+    background-color: red;
+    /* 
+    width를 300px로 바꾸면 min클래스는 400px유지, max는 같이 줄어듦 
+    width를 500px로 바꾸면 max클래스는 500px유지, min은 같이 늘어남
+    */
+}
+.parent > .min{
+    min-width: 400px;
+    height: 100px;
+    background-color: orange;
+
+}
+
+.parent > .max{
+    max-width: 400px;
+    height: 100px;
+    background-color: rebeccapurple;
+}
+
+.box{
+    background-color: beige;
+    border: 1px solid black;
+}
+
+.box-px{
+    width: 50px;
+    height: 50px;
+
+}
+.box-view{
+    width: 50vw;
+    height: 50vh;
+}
+.box-per{
+    width: 50%;
+    height: 50%;
+}
+.rem{
+    font-size: 2rem;
+    /* root의 기본픽셀값(16px)이 1rem */
+    /* 2rem = 32px */
+}
+.em{
+    font-size: 2em;
+    /* 부모의 글꼴에 비례함 */
+    /* 부모가 32px이기 때문에 자식으로 내려갈수록 2(em)배가 됨 */
+}

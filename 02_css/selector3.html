@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상 클래스 선택자 & 가상 요소 선택자</title>
+    <style>
+        .div1{
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        /* 1. 가상 클래스 선택자 */
+        /* 1-1 hover, active, focus, checked */
+        /* 
+        - E:active {} E 요소에 마우스 클릭 또는 키보드 엔터가 눌리는 "동안"
+        - E:hover {} E 요소에 마우스가 올라가 있는 동안
+        - E:focus {} E 요소에 포커스가 머물러 있는 동안 (input, textarea)
+        - E:checked {} E 요소가 체크 되었을 때 (radio, checkbox)
+        */
+    </style>
+</head>
+<body>
+    <input type="text" />
+    <a href="https://www.naver.com">naver</a>
+    <a href="https://www.google.com">google</a>
+    <div class="div1">
+        <span>div1</span>
+    </div>
+
+</body>
+</html>

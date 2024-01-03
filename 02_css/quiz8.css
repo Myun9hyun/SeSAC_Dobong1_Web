@@ -1,0 +1,13 @@
+.div{
+    display: inline-block;
+    background-color: orange;
+    width: auto;
+    height: 200px;
+
+}
+.c-inline-block{
+    display: inline-block;
+    background-color: green;
+    margin-right: 30px;
+
+}
