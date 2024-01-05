@@ -5,30 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>선택자 종합실습</title>
     <style>
-      form {
+        /* form {
         width: 400px;
-      }
+        }
 
-      /* focus */
-      textarea {
+        textarea {
         width: 100%;
-      }
-      /* checked */
-      /* active */
-      button {
-        float: right;
-        padding: 5px 15px;
-        background-color: #f96666;
-        color: white;
-        font-size: 17px;
-        border-radius: 10px;
-        border: none;
-      }
+        }
+
+        button {
+            float: right;
+            padding: 5px 15px;
+            background-color: #f96666;
+            color: white;
+            font-size: 17px;
+            border-radius: 10px;
+            border: none;
+        }
+
+        #red:checked + label {
+            color: white;
+            background-color: red; 
+        }
+
+        #blue:checked + label {
+            color: white;
+            background-color: blue; 
+        }
+
+        #yellow:checked + label {
+            color: black;
+            background-color: yellow; 
+        }
+        .textbox:hover{
+            background-color: pink;
+        }
+        .voice:hover{
+            background-color: black;
+            color: white
+        }
+
+        .submit:active{
+            background-color: gray;
+            color: pink;
+        }
+
+        .red:checked{
+            background-color: red;
+        } */
+
     </style>
-  </head>
+    <link rel="stylesheet" href="./quiz7.css">
+</head>
   <body>
-    <h3>건의 사항을 적어주세요!</h3>
+    <h3 class="voice">건의 사항을 적어주세요!</h3>
     <form>
+        <textarea class="textbox" cols="80" rows="10" placeholder="건의사항🎈"></textarea>
+ 
+        <input type="checkbox" id="red">
+            <label for="red">빨강</label>
+        <input type="checkbox" id="blue">
+            <label for="blue">파랑</label>
+        <input type="checkbox" id="yellow">
+            <label for="yellow">노랑</label>
       <!-- label
         - 명시적 방식: id와 for 맞춰주기
         - 암시적 방식: label 내부에 input 쓰기 
@@ -36,7 +75,7 @@
       -->
 
       <!-- checkbox와 textarea 만들기 -->
-      <button>제출</button>
+      <button class="submit">제출</button>
     </form>
   </body>
 </html>
