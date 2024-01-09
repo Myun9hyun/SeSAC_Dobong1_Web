@@ -77,3 +77,94 @@
     /* 부모의 글꼴에 비례함 */
     /* 부모가 32px이기 때문에 자식으로 내려갈수록 2(em)배가 됨 */
 }
+
+.square{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    background-color: blue;
+    
+}
+.border{
+    background-color: yellow;
+    /* 단축속성 */
+    /* 굵기 모양 색깔 */
+    /* border: 3px solid red; */
+    /* border-color: blue; */
+    
+    border-style: dotted;
+    border-width: 3px;
+    border-color: red black green white;
+    border-right-width: 10px;
+
+}
+.rounded{
+    background-color: yellowgreen;
+    /* border-radius: 20px; */
+    /* border-radius는 가로세로의 절반만큼 px을 작성하면 원이 됨. */
+    /* 50%로도 가능 */
+    /* border-radius: 10px 20px 30px 40px; */
+    /* border-radius: 5px 20px 40px; */
+    border-radius: 5px 40px;
+}
+
+.quiz{
+    background-color: blue;
+    border-color: red orange black yellow;
+    border-style: solid dotted dashed;
+    border-width: 2px 5px 10px 15px;
+    border-radius: 10px 20px 30px 40px;
+
+}
+.box-sizing{
+    padding: 20px;
+    background-color: orange;
+    border: 15px solid red;
+
+}
+.content-box{
+    box-sizing: content-box;
+}
+.border-box{
+    box-sizing: border-box;
+}
+.d-none {
+    /* display: none; */
+    background-color: red;
+}
+.invisible {
+  /* visibility: hidden; */
+  background-color: orangered;
+}
+
+.opacity-0 {
+  /* opacity: 0; */
+  background-color: tomato;
+}
+.original{
+    background-color: blue;
+}
+.quiz-box{
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+    color: aqua;
+}
+.hidden:hover{
+    box-sizing: border-box;
+    visibility: hidden;
+    color: black
+}
+.overflow-hidden{
+    overflow: hidden;
+}
+.overflow-scroll{
+    overflow: scroll;
+}
+.overflow-auto{
+    overflow: auto;
+}
+.overflow-visible{
+    overflow: visible;
+}
