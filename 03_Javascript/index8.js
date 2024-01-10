@@ -55,7 +55,7 @@ console.log(area);
 
 let today = new Date();
 console.log(today.getDay(), '요일'); // 요일(0~6) 0: 일요일
-if(today == 0 && today == 6){
+if(today == 0 || today == 6){
     console.log("오늘은 주말입니다.");
 }
 else{
