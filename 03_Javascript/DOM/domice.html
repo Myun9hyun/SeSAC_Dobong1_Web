@@ -1,0 +1,39 @@
+<script>
+    // TODO: 문제 조건을 만족하는 js 코드 작성
+    // (참고) article-box, img-box, text-center 클래스에 대한 스타일시트는 haed > style 태그에 이미 정의되어 있습니다.
+
+    const section = document.querySelector("section");
+    const icecreams = [
+      "내가 아인슈페너?!",
+      "엄마는 외계인",
+      "민트 초콜릿 칩",
+      "뉴욕 치즈케이크",
+      "아이스 초당옥수수",
+      "초콜릿 무스",
+      "체리쥬빌레",
+      "뮤! 넌 내거야",
+      "오레오 쿠키 앤 크림",
+    ];
+
+    for(let i = 1; i <= icecreams.length; i++) {
+      let article = document.createElement('article');
+
+      let img = document.createElement('img');
+      img.setAttribute('src', `./ex_img/icecream${i}.png`);
+      img.classList.add('img-box');
+
+      let rank = document.createElement('h3');
+      rank.textContent = `Top${i}`;
+      rank.classList.add('text-center');
+
+      let taste = document.createElement('div');
+      taste.textContent = icecreams[i - 1];
+      taste.classList.add('text-center');
+
+      article.classList.add('article-box');
+      article.append(img);
+      article.append(rank);
+      article.append(taste);
+      section.append(article);
+    }
+  </script>
