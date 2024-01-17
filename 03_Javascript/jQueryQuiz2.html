@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js" integrity="sha256-eTyxS0rkjpLEo16uXTS0uVCS4815lc40K2iVpWDvdSY=" crossorigin="anonymous"></script>
+
+    <title>Document</title>
+    <style>
+        .w{
+            font-weight: 700;
+        }
+        .sunday{
+            color : red;
+        }
+        .title{
+            text-align: center;
+            color: green;
+        }
+        .saturday{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    
+    <p>날짜 : <input type="text" id="date" readonly></p>
+    <p>내용 : <input type="text" id="content"></p>
+    <button onclick="schdule()">작성</button>
+    
+    
+    <h2 class="title">2022년 7월</h2>
+
+    <table width="500px" height="500px" align="center" text-align="center">
+        <tr class="w">
+            <td class="sunday"><p>일</p></td>
+            <td><p>월</p></td>
+            <td><p>화</p></td>
+            <td><p>수</p></td>
+            <td><p>목</p></td>
+            <td><p>금</p></td>
+            <td class="saturday"><p>토</p></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>1</td>
+            <td class="saturday">2</td>
+        <tr>
+            <td class="sunday">3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td class="saturday">9</td>
+        </tr>
+        <tr>
+            <td class="sunday">10</td>
+            <td>11</td>
+            <td>12</td>
+            <td>13</td>
+            <td>14</td>
+            <td>15</td>
+            <td class="saturday">16</td>
+        </tr>
+        <tr>
+            <td class="sunday">17</td>
+            <td>18</td>
+            <td>19</td>
+            <td>20</td>
+            <td>21</td>
+            <td>22</td>
+            <td class="saturday">23</td>
+        </tr>
+        <tr>
+            <td class="sunday">24</td>
+            <td>25</td>
+            <td>26</td>
+            <td>27</td>
+            <td>28</td>
+            <td>29</td>
+            <td class="saturday">30</td>
+        </tr>
+        <tr>
+            <td class="sunday">31</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <script>
+        let sch;
+        $('td').on('click', function(){
+            let date = $(this).text();
+            $('#date').val($(this).text());
+            // console.log(this);
+            console.log($(this).text());
+            sch = this;
+            
+        })
+        // $('button').on('click', function(){
+        //     console.log(this);
+        // })
+        function schdule(){
+            let schdule = $('#content').val();
+            $(sch).append('<p>' + schdule + '</p>')
+            $('#content').val('');
+            $('#date').val('');
+            
+        }
+    </script>
+</body>
+</html>
