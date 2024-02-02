@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>메인페이지</title>
+    <!-- head 인클루드 -->
+    <%-include('./include/head')%>
+  </head>
+  <body>
+    <!-- header 인클루드 -->
+    <%-include('./include/header')%>
+    <h2>안녕하세요! <%=user%> 의 블로그입니다!!</h2>
+    <ul>
+      <%for(let content of contentData){%>
+      <li>
+        <a href="/content/<%=content.contentID %>"><%=content.title %></a>
+        <button onclick="deleteContent()">삭제</button>
+      </li>
+      <%}%>
+    </ul>
+  </body>
+</html>
