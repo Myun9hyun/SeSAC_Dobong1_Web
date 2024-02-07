@@ -182,21 +182,21 @@ use dobong;
 
 SHOW tables;
 
-CREATE TABLE member(
+CREATE TABLE members(
     id VARCHAR(20) NOT NULL PRIMARY KEY,
     name VARCHAR(5) NOT NULL,
     age INT,
     gender VARCHAR(2) NOT NULL,
     email VARCHAR(50),
-    promotion VARCHAR(2)
+    promotion VARCHAR(2) DEFAULT 'x'
 );
 
 DELETE FROM member;
-DESC member;
+DESC members;
 
-ALTER TABLE member MODIFY id INT;
-ALTER TABLE member DROP age;
-ALTER TABLE member ADD interest VARCHAR(100);
+ALTER TABLE members MODIFY id INT;
+ALTER TABLE members DROP age;
+ALTER TABLE members ADD interest VARCHAR(100);
 
 CREATE TABLE user(
     id VARCHAR(10) NOT NULL PRIMARY KEY,
@@ -222,10 +222,9 @@ SELECT * FROM user;
 SELECT * FROM user ORDER BY birthday;
 SELECT gender FROM user WHERE gender='M' ORDER BY name DESC;
 SELECT id, name FROM user where birthday LIKE '199%'
-
 SELECT * FROM user where birthday LIKE '%06%' ORDER BY birthday ASC;
-
 SELECT * FROM user where gender='M' AND birthday LIKE '197%';
 SELECT * FROM user ORDER BY age DESC LIMIT 3;
-SELECT * FROM user WHERE age BETWEEN 25 AND 30;
-
+SELECT * FROM user WHERE age BETWEEN 25 AND 50;
+UPDATE user SET pw="12345678" where id='hong1234';
+DELETE FROM USER WHERE id='jungkrat'
