@@ -46,5 +46,5 @@ app.post("/login", (req, res) => {
 app.post("/token", (req, res) => {});
 
 app.listen(PORT, () => {
-  console.log(`http://49.50.173.156/:${PORT}`);
+  console.log(`http://49.50.173.156:${PORT}`);
 });
