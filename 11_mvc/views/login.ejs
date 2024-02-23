@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <style>
+      .success {
+        color: blue;
+        font-weight: 700;
+      }
+      .error {
+        color: red;
+        font-weight: bold;
+      }
+
+      label {
+        display: flex;
+      }
+
+      label span {
+        width: 80px;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="/">홈으로이동</a>
+    <br />
+    <form name="login">
+      아이디: <input type="text" name="userId" required /> <br /><br />
+      비밀번호: <input type="password" name="userPw" required />
+      <br />
+      <button type="button" onclick="loginCheck()">로그인</button>
+      <button type="button" onclick="loginCheck()">로그인</button>
+    </form>
+    <p></p>
+
+    <script>
+      const form = document.forms["login"];
+      const message = document.querySelector(".message");
+      function loginCheck() {}
+      const data = {
+        id: form.userId.value,
+        password: form.userPw.value,
+      };
+      axios({
+        method: "POST",
+        url: "/login",
+        data: data,
+      })
+        .then((res) => {
+          console.log(res);
+          // 성공
+          if (res.data.isSuccess) {
+            p.innerText = "로그인 성공";
+            p.style.color = "blue";
+          } else {
+            // 실패
+            p.innerText = "아이디 또는 패스워드 오류😢";
+            p.style.color = "red";
+          }
+        })
+        .catch((err) => {
+          err;
+          console.log(data);
+        });
+    </script>
+  </body>
+</html>

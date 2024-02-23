@@ -1,0 +1,28 @@
+@server = http://localhost:8084
+@playerId = 1
+GET {{server}}/players
+
+### 선수 "추가"
+GET {{server}}/players{{playerId}}
+
+### 
+POST {{server}}/players
+Content-Type:application/json; charset=UTF-8
+{
+    "name" : "손흥민",
+    "age" : 31,
+    "teamid" :2
+}
+
+### 특정 선수의 소속 팀 변경(params)
+PATCH {{server}}/players/{{playerId}}/team
+Content-Type:application/json; charset=UTF-8
+
+{
+    "teamId":3,
+
+}
+
+### 특정 선수 삭제
+DELETE {{server}}/players/{{playerId}}
+
