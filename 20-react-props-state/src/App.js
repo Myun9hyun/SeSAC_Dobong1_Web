@@ -1,53 +1,53 @@
 import { ClassProps, ClassProps2 } from "./components/ClassProps";
-import { FunctionProps } from "./components/FunctionProps";
-import { FunctionProps2 } from "./components/FunctionProps";
-import { FoodProps } from "./components/FoodProps";
-import { FoodProps2 } from "./components/FoodProps";
-import { BookProps } from "./components/BookProps";
-import { TextProps } from "./components/TextProps";
 import ClassState from "./components/ClassState";
+import { FunctionProps, FunctionProps2 } from "./components/FunctionProps";
 import FunctionState from "./components/FunctionState";
-import QuizProps from "./components/QuizProps";
-import PlusQuizProps from "./components/PlusQuizProps";
-
-import "./App.css";
+import PropsMap from "./components/PropsMap";
+import PororoObj from "./components/PororoObj";
+import Alphabet from "./components/Alphabet";
+import Quiz from "./components/Quiz";
+// import PracticeState from "./components/PracticeState";
 
 function App() {
+  const dataArr = [
+    { name: "peach", number: 5, price: 5000 },
+    { name: "banana", number: 1, price: 3000 },
+    { name: "apple", number: 10, price: 7000 },
+    { name: "grape", number: 2, price: 8500 },
+  ];
   return (
     <div className="App">
-      <h1>hello, props</h1>
+      {/* <h1>hello, props</h1>
       <ClassProps name="루피" color="pink" nickname="공주" />
       <ClassProps name="뽀로로" color="blue" nickname="사고뭉치" />
-      <ClassProps2 name="포비" color="beige" nickname="곰" />
-
-      <FunctionProps name="사과" number={5} price={5000} />
+      <ClassProps2
+        name="포비"
+        color="beige"
+        nickname="곰"
+        // bgColor="black"
+      />
+      <FunctionProps name="사과" number={5} price={1000} />
       <FunctionProps2 price={50000} />
-      <FunctionProps2>
-        여기가 children props
+      <FunctionProps2 price={10000} name="딸기">
         <section style={{ backgroundColor: "yellow" }}>
           <article>1</article>
           <article>2</article>
           <article>3</article>
         </section>
       </FunctionProps2>
-      <FoodProps name="삼겹살" />
-      <FoodProps2>
-        hi
-        <section style={{ backgroundColor: "red" }}>
-          <article>children은 빨강배경</article>
-        </section>
-      </FoodProps2>
-      <BookProps
-        title="나미야 잡화점의 기적"
-        price={15000}
-        author="히가시노 게이고"
-        type="추리, 판타지"
-      />
-      <TextProps text="점심뭐먹지" valid />
+
+      <h1>hello, state</h1>
       <ClassState />
       <FunctionState />
-      <QuizProps start={0} />
-      <PlusQuizProps start={0} />
+
+      <h1>연습문제</h1>
+      <PracticeState></PracticeState>
+      <PororoObj /> */}
+      <h1>map과 filter 사용</h1>
+
+      <PropsMap arr={dataArr} />
+      <Alphabet />
+      <Quiz />
     </div>
   );
 }
